@@ -1,0 +1,98 @@
+#root h1 {
+  font-size: 4rem;
+
+  color: brown;
+}
+
+.input-section {
+  width: 60%;
+  height: auto;
+
+  display: flex;
+  gap: 10px;
+
+  padding-block: 1rem;
+  /* background-color: red; */
+}
+
+.input-section input {
+  flex: 1;
+
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+
+  border-radius: 5px;
+  /* border: 1px solid;  */
+  outline: none;
+  border: 1px solid brown;
+}
+
+.input-section button {
+  padding: 0.5rem 1rem;
+
+  font-size: 1rem;
+
+  border: none;
+  border-radius: 5px;
+
+  color: beige;
+  background-color: brown;
+  font-weight: bold;
+}
+
+.task-list {
+  padding-block: 2rem;
+  padding-inline: 1rem;
+
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.task-card {
+  padding: 1rem;
+
+  border: 1px solid brown;
+  border-radius: 10px;
+  box-shadow: 0 0 5px brown;
+
+  background-color: lightgoldenrodyellow;
+
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: space-between; */
+}
+.task-card>*{
+    margin-block: 5px;
+}
+.task-card h4{
+    flex : 1;
+}
+.task-card button {
+  padding: 5px 10px;
+  display: inline;
+
+  border: none;
+  background-color: rgb(207, 106, 106);
+  color: black;
+  border-radius: 5px ;
+
+  margin-right: 10px;
+}
+
+@media (max-width: 360px) {
+    #root h1{
+        font-size: 2rem;
+    }
+    .input-section{
+        width: 100%;
+
+        /* background-color: red; */
+    }
+
+    .input-section input{
+        width: 60%;
+    }
+}
