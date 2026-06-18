@@ -63,6 +63,9 @@ pids
 *.seed
 *.pid.lock
 
+# Runtime files created at runtime
+/backend/tasks.json
+
 # Misc
 .lock-wscript
 lib-cov
