@@ -1,12 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 const taskRoutes = require('./routes/taskRouter');
 
 mongoose
-    .connect('mongodb://239x1a0538_db_user:Rde5UKgH2UfD5DNW@ac-it7xmgu-shard-00-00.wnrexim.mongodb.net:27017,ac-it7xmgu-shard-00-01.wnrexim.mongodb.net:27017,ac-it7xmgu-shard-00-02.wnrexim.mongodb.net:27017/?ssl=true&replicaSet=atlas-g8u0sh-shard-0&authSource=admin&appName=Cluster0')
+    .connect(process.env.MONGO_URI)
     .then(()=>{
         console.log('Mongo DB cloud connected successfully')
     })
