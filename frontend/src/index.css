@@ -1,4 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap');
+:root{
+  /* Backgrounds */
+  --bg: #161B22;          /* page background (dark "desk") */
+  --bg-2: #1E2530;         /* subtle radial glow accent on bg */
+
+  /* Paper / surface */
+  --paper: #F3ECDC;        /* card & input background, headings on dark bg */
+  --paper-edge: #E4DAC2;   /* paper edge shading */
+
+  /* Text */
+  --ink: #262017;          /* primary text on paper */
+  --ink-soft: #5C5440;     /* secondary/muted text on paper */
+
+  /* Primary accent */
+  --mustard: #D9A441;      /* buttons, "Ledger" highlight, active tab */
+  --mustard-dark: #B9842B; /* button hover state */
+
+  /* Status colors */
+  --coral: #D9684E;        /* pending status, errors, delete actions */
+  --sage: #5C8567;         /* done status, success states */
+
+  /* Lines */
+  --rule: #CBBFA0;         /* dashed dividers, input underlines */
+
+  /* Accessibility */
+  --focus-ring: #6FA8DC;   /* keyboard focus outline */
+
+  /* Radius */
+  --radius: 3px;
+}
 
 *{
     margin: 0px;
@@ -7,23 +37,19 @@
 }
 
 #root{
-    padding-inline: 10vw;
-    padding-block-start: 4rem;
-
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
-    flex-direction: column;
-
+    justify-content: center;
     align-items: center;
 
-    font-family: 'Poppins';
+    font-family: 'Work Sans', sans-serif;
 
-    background-color: snow;
+    background-color: #161B22;
+
+    color: white;
 }
 
-@media (max-width: 320px) {
-    #root{
-        padding-block: 2rem;
-    }
+h1,h2,h3,h4,label,input{
+    font-family: 'Courier Prime', Courier, monospace;
 }

@@ -5,6 +5,7 @@ require('dotenv').config();
 
 const app = express();
 const taskRoutes = require('./routes/taskRouter');
+const userRoutes = require('./routes/userRouter');
 
 mongoose
     .connect(process.env.MONGO_URI)
@@ -21,8 +22,9 @@ app.get("/",(req,res)=>{
     res.send("Backend Server is running");
 })
 
+app.use("/api",userRoutes);
 app.use("/tasks",taskRoutes);
 
-app.listen(3000,()=>{
-    console.log('http://localhost:3000');
+app.listen(process.env.PORT,()=>{
+    console.log(`http://localhost:${process.env.PORT}`);
 })
