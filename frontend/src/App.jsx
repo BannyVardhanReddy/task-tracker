@@ -72,13 +72,13 @@ export default function App() {
 
   return (
     <>
-      {/* <h1>Task Manager</h1>
+      <h1>Task Manager</h1>
       <InputSection data={data} setData={setData} handleOnSubmit={handleOnSubmit}/>
       <TaskList
         tasks={tasks}
         handleOnDelete={handleOnDelete}
         handleOnUpdate={handleOnUpdate}
-      ></TaskList> */}
+      ></TaskList>
       <Home></Home>
     </>
   );

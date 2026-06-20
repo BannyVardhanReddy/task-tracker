@@ -1,6 +1,7 @@
 .container{
-    width: 25vw;
-
+    /* width: minmax(350px,25vh); */
+    max-width: 420px;
+    width: 100%;
     text-align: center;
 }
 
@@ -44,20 +45,28 @@
     margin-bottom: 1rem;
 }
 
-form{
+.form{
     background-color: var(--paper);
     color: black;
     width: 100%;
 
-    padding: 2.5rem 1.5rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
+    padding: 2rem 1.5rem;
+    text-align: left;
     border-radius: 5px;
 
     border-top: 5px solid var(--mustard-dark);
+}
+
+.form>*{
+    margin-bottom: 0.5rem;
+}
+
+form{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 form>*{
@@ -80,7 +89,29 @@ form input{
     width: 100%;
     display: flex;
     flex-direction: row;
-
-    /* background-color: red; */
     justify-content: space-between;
+}
+
+.temp{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.temp input{
+    width: 12px;
+    height: 12px;
+}
+
+.form-section button{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0px;
+
+    border: none;
+
+    background-color: var(--mustard);
+    border-radius: 5px;
+
+    font-size: 1rem;
+    font-weight: bold;
 }
